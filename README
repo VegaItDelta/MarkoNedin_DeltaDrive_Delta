@@ -1,0 +1,45 @@
+Delta drive
+
+Following text describes the behavior of an application called Delta drive. Delta drive application is intended to allow users to easily and quickly book vehicles near them in order to reach their desired destination.
+Users that are using an application will be called passengers.
+Passengers must be registered in order to use an application. When registering passengers need to provide an email, password, first name, last name and birthday. Email must be unique for each passenger. Successfully registered passengers can login into the application and start using it.
+
+Passengers can book a vehicle for a ride. Before passengers book a vehicle they need to find available vehicles near them. Application requires users current location (latitude and longitude) and target destination (latitude and longitude), before it returns available vehicles. Using the application passengers can retrieve 10 nearest available vehicles near them and choose one of those vehicles. Every vehicle has a brand, driver first name, driver last name, distance from a passenger (meters), rating, starting price, price per km and estimated total price for the whole trip. When the user decides which vehicle is best for him it will try to book it. If the driver of the vehicle accepts a passenger booking request it is considered that the vehicle is booked.
+
+Every vehicle has a brand, driver first name, driver last name, current location (latitude and longitude), starting price, price per km. Vehicle is considered available while waiting for a passenger. Once a passenger books a vehicle it is considered booked. Driver of the vehicle can decide if it is going to accept some passenger request to be booked or it can reject it. Drivers may decide to reject a passenger because of various reasons, for example in case of vehicle malfunctioning or maybe they are not interested in driving a specific passenger to their desired destination. Driver of the vehicle will complete the ride once the passenger is driven to the desired location and once again the driver is available to be booked by a new passenger.
+
+Passengers can rate a driver once the ride has completed. Available ratings are values from one to five. When rating a driver, passengers can also leave a comment, but it is optional.
+
+Passengers can preview their traveling history. When previewing a history user should be able to see the starting and ending location, total price of the trip and a driver that was booked at that point of time.
+Drivers
+● This task contains a CSV file with drivers that should be used when testing an application. CSV contains following data:
+○ Brand - brand of the vehicle.
+○ First name - driver first name.
+○ Last name - driver last name.
+○ Latitude - current latitude position of the vehicle.
+○ Longitude - current longitude position of the vehicle.
+○ Start price - starting price of the ride.
+○ Price per km = every passed km price.
+● When a passenger tries to book a ride it is required to simulate a vehicle driver accepting or rejecting requests. There is a 25% chance that the driver will reject a passenger request.
+● When a driver accepts a passenger request, the vehicle is booked, it is required to simulate vehicle driving to a passenger and then driving to desired destination. For simplicity purposes suppose that the driver is going 60 km/h and that updates his location every 5 seconds.
+
+Tasks
+
+- Choose any programming language to implement this task.
+- All database(s) are allowed to be used to solve this task.
+- Feel free to use any framework or library that may help you complete this task.
+- Design APIs that will enable the Delta drive application to work.
+- Write the code the best way you can, as it is planned to be deployed to a production and used by real users.
+- Use drivers.csv file to load the initial dataset that will be used for testing.
+  Git details
+  Project should be hosted on Github under the name of “NameLastname_DeltaDrive_Delta”
+  If you don’t have Gihub profile it can be created on the link.
+
+After finishing the assignment you should transfer ownership rights to the profile that is sent in the email with the assignment. After this step, you will not be able to see the repository.
+
+How to transfer rights:
+​Repository home page > Settings > Options (side menu) > Transfer ownership (at the bottom of the page)
+​Enter the profile sent in the email
+
+If there are some questions feel free to ask then.
+Good Luck!
